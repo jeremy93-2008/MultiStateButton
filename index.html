@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Multi Botón</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/m-button.js"></script>
+</head>
+<body>
+	<div id="boton" class="m-button">
+		<div class="first">Dame Clic</div>
+		<div class="loading"></div>
+		<div class="last">Finalizado</div>
+	</div>
+</body>
+<script>
+	let btn = new mButton();
+	btn.init();
+	btn.click("#boton",function(resolve,error)
+	{
+		window.setTimeout(function()
+		{
+			console.log("Hola")
+			resolve("OK!");
+		},1500);
+	});
+</script>
+</html>
